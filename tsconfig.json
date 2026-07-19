@@ -12,12 +12,23 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve"
+    "module": "preserve",
+    "paths": {
+      "themed-button": ["./dist/themed-button"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true
   },
-  "files": []
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/themed-button/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/themed-button/tsconfig.spec.json"
+    }
+  ]
 }
