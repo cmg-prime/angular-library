@@ -1,0 +1,28 @@
+//NB: the host is the button
+:host[themed-button] {
+    width: fit-content;
+    height: fit-content;
+    font-size: 16px;
+    color: rgb(25, 25, 25);
+    border-radius: 1rem;
+    background-color: white;
+    overflow: visible;
+    padding: 0.25rem 2rem;
+    box-sizing: border-box;
+    margin: 0rem;
+    border: 1px solid var(--color);
+    //NB: add sufficient box-shadow height to add dimensionality, then set translateY such that hover effect looks like pressing a button.
+    //NB: using px leads to - for certain string lengths in the button text - the right side of the shadow being cut off.
+    box-shadow: 0.12rem 0.18rem 0 var(--color);
+    transform: translateY(-2px);
+}
+
+:host[themed-button]:not([disabled]):hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 0 var(--color);
+    transform: translateX(1px);
+}
+
+:host[themed-button]:not([disabled]):active {
+    background-color: var(--click-color);
+}
