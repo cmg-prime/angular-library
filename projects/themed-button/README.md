@@ -1,3 +1,7 @@
+## License
+
+This library is distributed under the GNU General Public License v3.0 or later. See the LICENSE file in this directory for details.
+
 # ThemedButton
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.0.
