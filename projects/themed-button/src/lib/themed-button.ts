@@ -9,7 +9,7 @@ import { ButtonType } from "./themed-button.enum";
 })
 
 export class ThemedButton {
-    @Input() type: ButtonType = ButtonType.implementation;
+    @Input() theme: ButtonType = ButtonType.implementation;
 
     static colorMapping: Record<ButtonType, string> = {
         [ButtonType.implementation]: "rgb(0,45,230)",
@@ -22,6 +22,10 @@ export class ThemedButton {
         [ButtonType.success]: "rgb(209, 255, 209)"
     };
 
-    @HostBinding('style.--color') color = ThemedButton.colorMapping[this.type];
-    @HostBinding('style.--click-color') clickColor = ThemedButton.clickColorMapping[this.type];
+    @HostBinding('style.--color') get color(){
+        return ThemedButton.colorMapping[this.theme];
+    }
+    @HostBinding('style.--click-color') get clickColor(){
+        return ThemedButton.clickColorMapping[this.theme];
+    }
 }
