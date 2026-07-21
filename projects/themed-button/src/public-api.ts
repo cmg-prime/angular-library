@@ -3,3 +3,4 @@
  */
 
 export * from './lib/themed-button';
+export * from './lib/themed-button.enum'
