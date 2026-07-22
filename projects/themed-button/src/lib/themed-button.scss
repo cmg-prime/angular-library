@@ -26,3 +26,10 @@
 :host[themed-button]:not([disabled]):active {
     background-color: var(--click-color);
 }
+
+:host[themed-button]:disabled {
+    color: gray;
+    background-color: rgb(244, 244, 246);
+    box-shadow: 0.12rem 0.18rem 0 gray;
+    border-color: gray;
+}
